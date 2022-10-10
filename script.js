@@ -1,3 +1,15 @@
+// Listen for Submit
+document.getElementById("calculadora-al-prestamo").addEventListener("submit", function(e) {
+  // Hide Results
+  document.getElementById("resultado").style.display = "none";
+
+  // Show Loader
+  document.getElementById("cargando").style.display = "block";
+
+  setTimeout(calcularResultado, 2000);
+
+  e.preventDefault();
+});
 // Calculate Results
 function calcularResultado() {
     // UI Vars
@@ -63,11 +75,10 @@ function calcularResultado() {
       document.querySelector(".alert").remove();
     }
   }
-  
   function BotonDePrestamo(){
     document.getElementById("Solicita-tu-prestamo").style.background = "#4C60EC";
     document.getElementById("BotonDePrestamo").innerHTML = "¡Listo! en breve recibiras un mail";
-    document.getElementById("BotonDePrestamo").style.background = "MediumSeaGreen";
-   
-    
+    document.getElementById("BotonDePrestamo").style.background = "MediumSeaGreen"; 
+  }
+  function toggleItemState(){
   }
